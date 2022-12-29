@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request
 from kural import *
 import threading
+
 app = Flask(__name__)
 
 
@@ -18,8 +19,13 @@ def data():
         thread = threading.Thread(target=kuralgrabber, args=(kuralnum,))
         thread.start()
 
-        return render_template('index.html', tamildef=definition[0], englishdef = definition[1])
+        return render_template('index.html', kuralline1=definition[0], kuralline2 = definition[1], tamildef = definition[2])
+
+
+
 
 
 if __name__ == '__main__':
-    app.run()
+
+    app.run(host='localhost', port = 5100)
+    app.debug = True

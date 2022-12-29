@@ -23,18 +23,30 @@
                     <label>Thirukkural Number</label>
                 </div>
 
-                    <input class="dyna bttn" type="submit" value="Submit" />
+                <input class="dyna bttn" type="submit" value="Submit" />
 
             </form>
         </div>
         <div class="answer-box">
-            {% if tamildef %}
-            <p>{{ tamildef }}</p>
-            {% endif %}
 
-            {% if englishdef %}
-            <p>{{ englishdef }}</p>
-            {% endif %}
+
+            <div>
+                {% if (kuralline1 and kuralline2) %}
+                <p class="titles">குறள்: </p>
+                <p class="topline">{{ kuralline1 }}</p>
+                <p class="secondline">{{ kuralline2 }}</p>
+                {% endif %}
+                <!-- {% if kuralline2 %}
+                <p>{{ kuralline2 }}</p>
+                {% endif %} -->
+            </div>
+
+            <div>
+                {% if tamildef %}
+                <p class="titles">குறள் அர்த்தம்: </p>
+                <p>{{ tamildef }}</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </body>
