@@ -1,5 +1,4 @@
 import gtts as gt
-import os
 import requests
 import playsound
 
@@ -12,8 +11,10 @@ def kuralgrabber(kuralnum):
         verse = apidict['line1'] + " " + apidict['line2']
 
         # engine.say(apidict['line1'])
+        # mp3_fp = BytesIO()
         tts = gt.gTTS(text = verse, lang = "ta")
         tts2 = gt.gTTS(text = apidict['tam_exp'], lang = "ta")
+        # tts.write_to_fp(mp3_fp)
         tts.save("kuralexample.mp3")
         playsound.playsound("kuralexample.mp3")
         tts2.save("englexample.mp3")

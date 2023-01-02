@@ -1,0 +1,8 @@
+flask
+threading
+gtts
+requests
+playsound
+Flask
+render_template
+request
