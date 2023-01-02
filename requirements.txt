@@ -1,5 +1,4 @@
 flask
-threading
 gtts
 requests
 playsound
