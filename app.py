@@ -26,6 +26,4 @@ def data():
 
 
 if __name__ == '__main__':
-
-    app.run(host='localhost', port = 5100)
-    app.debug = True
+    app.run()
