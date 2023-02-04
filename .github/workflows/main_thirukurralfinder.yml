@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'ThirukurralFinder'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_98949A936741491CB93FFE4B59C985C9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ED5185B2ADE44CB3B35AB83CF15C0A7E }}
