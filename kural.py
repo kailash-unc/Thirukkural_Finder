@@ -1,6 +1,7 @@
 import gtts as gt
 import requests
 import playsound
+import os
 
 def kuralgrabber(kuralnum):
     if kuralnum.isnumeric() and int(kuralnum) >= 1 and int(kuralnum) <= 1330:
@@ -15,10 +16,11 @@ def kuralgrabber(kuralnum):
         tts = gt.gTTS(text = verse, lang = "ta")
         tts2 = gt.gTTS(text = apidict['tam_exp'], lang = "ta")
         # tts.write_to_fp(mp3_fp)
-        tts.save("kuralexample.mp3")
-        playsound.playsound("kuralexample.mp3")
-        tts2.save("englexample.mp3")
-        playsound.playsound("englexample.mp3")
+        tts.save(os.getcwd() + "kuralexample.mp3")
+        print(os.getcwd() + "kuralexample.mp3")
+        playsound.playsound(os.getcwd() + "kuralexample.mp3")
+        tts2.save(os.getcwd() + "englexample.mp3")
+        playsound.playsound(os.getcwd() + "englexample.mp3")
 
         return [verse, apidict['eng_exp']]
         # os.system("kuralexample.mp3")
